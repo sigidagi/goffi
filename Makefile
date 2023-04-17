@@ -3,6 +3,8 @@
 build:
 	@echo "Compiling Go source"
 	go build -buildmode=c-shared -o libtest.a libtest.go
+	@echo ""
+	@echo "Compiling C++ main executable"
 	g++ main.cpp -L. -ltest -o main
 
 clean:

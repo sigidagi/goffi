@@ -4,11 +4,10 @@
 
 int main() {
 
-    std::cout << "Hello from C++\n";
-    std::cout << "Key " << GetKey() << "\n";
+    std::cout << "Calling golang function: ";
+    std::cout << "key " << GetKey() << "\n";
 
     //MySetup_t *s = new MySetup_t;
-
     auto sp = std::unique_ptr<MySetup_t>(new MySetup_t);
 
     InitSetup(sp.get());
